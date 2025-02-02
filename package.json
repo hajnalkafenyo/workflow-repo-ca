@@ -7,7 +7,9 @@
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky install",
     "e2e-ui": "playwright test --ui",
-    "test": "vitest"
+    "test": "vitest",
+    "live-server": "node ./live-server.js",
+    "start": "concurrently \"npm run dev\" \"npm run live-server\""
   },
   "keywords": [],
   "author": "",
@@ -16,10 +18,12 @@
     "@eslint/js": "^9.17.0",
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.5",
+    "concurrently": "^9.1.2",
     "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
     "globals": "^15.14.0",
     "jsdom": "^25.0.1",
+    "live-server": "^1.2.2",
     "prettier": "^3.4.2",
     "tailwindcss": "^3.4.12",
     "vitest": "^2.1.8"
